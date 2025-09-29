@@ -1,3 +1,13 @@
-hi
-Hello
-how are you
+package com.example.helloworld; // Adjust package as needed
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+
+    @GetMapping("/") // Maps this method to the root URL (e.g., http://localhost:8080/)
+    public String helloWorld() {
+        return "Hello World";
+    }
+}
